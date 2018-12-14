@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>vdom</title>
+		<style>
+			body {
+				width: 100vw;
+				height: 100vh;
+
+				margin: 0;
+				padding: 0;
+			}
+
+			canvas {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 600px;
+				height: 400px;
+			}
+
+			#app {
+				z-index: 1;
+			}
+
+			.btn {
+				position: fixed;
+				right: 2rem;
+				top: 2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app"></div>
+		<button class="btn">start</button>
+	</body>
+</html>

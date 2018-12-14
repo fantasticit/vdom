@@ -1,0 +1,43 @@
+{
+  "name": "vdom",
+  "version": "0.0.1",
+  "description": "A simple basic implement of virtual-dom algorithm",
+  "main": "./lib/vdom.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./config/webpack.dev.conf.js",
+    "build": "webpack --config ./config/webpack.prod.conf.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "justemit",
+  "license": "MIT",
+  "homepage": "https://github.com/justemit/vdom#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justemit/vdom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justemit/vdom/issues"
+  },
+  "keywords": [
+    "vdom",
+    "virtual-dom"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/runtime": "^7.1.5",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "eslint": "^5.8.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.4"
+  }
+}
