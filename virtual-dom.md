@@ -176,14 +176,14 @@ export default function render(vnode, parent) {
 
 ## 3. diff vnode
 
- 第 2 步已经实现了 vnode 到 dom 节点的转换与挂载，那么接下来某一个时刻 dom 节点发生了变化，如何更新 dom 树？显然不能无脑卸载整棵树，然后挂载新的树，最好的办法还是找出两棵树之间的差异，然后应用这些差异。
+第 2 步已经实现了 `vnode` 到 `dom` 节点的转换与挂载，那么接下来某一个时刻 `dom` 节点发生了变化，如何更新 `dom`树?显然不能无脑卸载整棵树，然后挂载新的树，最好的办法还是找出两棵树之间的差异，然后应用这些差异。
 
 ![diff-2-vnode](https://user-images.githubusercontent.com/26452939/49936056-d6e83500-ff0d-11e8-81ff-d1620acb31c4.png)
 
-在写 `diff` 之前， 首先要定义好，要 `diff` 什么，明确 `diff` 的返回值。比较上图两个 vnode，可以得出：
+在写 `diff` 之前，首先要定义好，要 `diff` 什么，明确 `diff` 的返回值。比较上图两个 vnode，可以得出：
 
 1. 更换第 _1、2、3_ 个 `li` 的内容
-2.  在 `ul` 下创建两个 `li`，这两个 li 为 *第 4 个*和 *第 5 个*子节点
+2. 在 `ul` 下创建两个 `li`，这两个 li 为 *第 4 个*和 *第 5 个*子节点
 
 那么可能得返回值为：
 
@@ -246,7 +246,7 @@ export default function render(vnode, parent) {
 }
 ```
 
-`diff` 的过程中，要保证节点的父  节点正确，并要保证该节点在父节点  的子节点中的索引正确（保证节点内容正确，位置正确）。`diff` 的核心流程：
+`diff` 的过程中，要保证节点的父节点正确，并要保证该节点在父节点 的子节点中的索引正确（保证节点内容正确，位置正确）。`diff` 的核心流程：
 
 - case CREATE: 旧节点不存在，则应当新建新节点
 - case REMOVE: 新节点不存在，则移出旧节点
@@ -284,7 +284,7 @@ export default function diff(oldVNode, newVNode) {
 
 ## 4. patch 应用更新
 
-知道了两棵树之前的差异，接下来如何应用这些更新？ 在文章开头部分我们提到  dom 节点树应当只有一个根节点，同时 `diff` 算法是保证了虚拟节点的位置和父节点是与 dom 树保持一致的，那么 patch 的入口也就很简单了，从 虚拟节点的挂载点开始递归应用更新即可。
+知道了两棵树之前的差异，接下来如何应用这些更新？在文章开头部分我们提到 `dom` 节点树应当只有一个根节点，同时 `diff` 算法是保证了虚拟节点的位置和父节点是与 `dom` 树保持一致的，那么 patch 的入口也就很简单了，从 虚拟节点的挂载点开始递归应用更新即可。
 
 ```javascript
 /**
@@ -342,6 +342,6 @@ export default function patch(parent, patches, index = 0) {
 
 ## 总结
 
-至此，`vdom` 的核心 `diff` 与 `patch`  都已基本实现。 在测试 demo 中，不难发现 `diff` 其实已经很快了，但是 `patch` 速度会比较慢，所以这里留下了一个待优化的点就是 `patch`。
+至此，`vdom` 的核心 `diff` 与 `patch` 都已基本实现。在测试 demo 中，不难发现 `diff` 其实已经很快了，但是 `patch` 速度会比较慢，所以这里留下了一个待优化的点就是 `patch`。
 
-本文完整代码均  在这个[仓库](https://github.com/justemit/vdom)。
+本文完整代码均在这个[仓库](https://github.com/justemit/vdom)。
