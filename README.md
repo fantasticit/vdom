@@ -2,6 +2,10 @@
 
 > A simple basic implement of virtual-dom algorithm
 
+文章说明：[vdom 原理解析与简单实现](https://github.com/justemit/coding-note/issues/23)
+
+实际应用：[qcharts](https://github.com/spritejs/q-charts)
+
 ## Usage
 
 ```javascript
