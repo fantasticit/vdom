@@ -23,7 +23,7 @@
     "virtual-dom"
   ],
   "devDependencies": {
-    "@babel/core": "^7.1.5",
+    "@babel/core": "^7.20.12",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
@@ -34,7 +34,7 @@
     "eslint": "^5.8.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
